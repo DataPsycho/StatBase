@@ -1,7 +1,36 @@
 # Implementation of Perceptron in Numpy
 import numpy as np
 
-class Perceptorn(object):
+#     def fit(self, features, targets):
+#         """Fit training data.
+#         Parameters
+#         ----------
+#         features : {array-like}, shape = [n_samples, n_features]
+#           Training vectors, where n_samples is the number of samples and
+#           n_features is the number of features.
+#         targets : array-like, shape = [n_samples]
+#           Target values.
+#         Returns
+#         -------
+#         self : object
+#         """
+#         rgen = np.random.RandomState(self.random_state)
+#         self.w_ = rgen.normal(loc=0.0, scale=0.01, size=1 + features.shape[1])
+#         self.errors_ = []
+#         for _ in range(self.n_iter):
+#             errors = 0
+#             for featuresi, target in zip(features, targets):
+#                 # featuresi represent each sample as array
+#                 update = self.eta * (targets - self.predict(featuresi))
+#                 print(update, featuresi)
+#             #     self.w_[1:] += update * featuresi
+#             #     self.w_[0] += update
+#             #     errors += int(update != 0.0)
+#             # self.errors_.append(errors)
+#         return self
+
+
+class Perceptron(object):
     """Perceptron classifier.
     Parameters
     ------------
@@ -45,14 +74,15 @@ class Perceptorn(object):
         -------
         self : object
         """
+
         rgen = np.random.RandomState(self.random_state)
         self.w_ = rgen.normal(loc=0.0, scale=0.01, size=1 + features.shape[1])
         self.errors_ = []
         for _ in range(self.n_iter):
             errors = 0
             for xi, target in zip(features, targets):
-                # xi represent each sample as array
-                update = self.eta * (targets - self.predict(xi))
+                # features represent each sample as array
+                update = self.eta * (target - self.predict(xi))
                 self.w_[1:] += update * xi
                 self.w_[0] += update
                 errors += int(update != 0.0)
