@@ -4,8 +4,6 @@
 [![Tensorflow 2.0.0](https://img.shields.io/badge/tensorflow-2.0.0-blue)](https://www.tensorflow.org/)
 [![Jupyter Lab](https://img.shields.io/badge/made%20with-jupyter%20lab-orange)](https://jupyter.org/)
 
-
-
 # StatBase
 StatBase is a quick lookup point for all beginner to advance
 Numerical algorithm is being used in Machine Learning. It will
