@@ -1,0 +1,82 @@
+# Implementation of Adaline Gradient Descend
+import numpy as np
+
+
+class AdalineGD(object):
+    """Adaptive Linear Neuron classifier.
+    Parameters
+    ------------
+    eta : float
+    Learning rate (between 0.0 and 1.0)
+    n_iter : int
+    Passes over the training dataset.
+    random_state : int
+    Random number generator seed for random weight
+    initialization.
+    Attributes
+    -----------
+    w_ : 1d-array
+    Weights after fitting.
+    cost_ : list
+    Sum-of-squares cost function value in each epoch.
+    """
+    def __init__(self, eta=0.01, n_iter=50, random_state=1):
+        self.eta = eta
+        self.n_iter = n_iter
+        self.random_state = random_state
+        self.w_ = []
+        self.cost_ = []
+
+    def net_input(self, features):
+        """Calculate net input
+        Example
+        -------
+        arr1 = np.array([[1, 2, 3], [2, 3, 4]])
+        arr2 = np.array([.2, .5, .7])
+        np.dot(arr1, arr2)
+        will return array([3.3, 4.7]) object
+        which is equivalent to w (arr2) transpose X (arr1)
+        """
+        return np.dot(features, self.w_[1:]) + self.w_[0]
+
+    @staticmethod
+    def activation(z):
+        """Compute the linear activation"""
+        return z
+
+    def predict(self, features):
+        """Return class label after unit step"""
+        return np.where(self.activation(self.net_input(features)) >= 0.0, 1, -1)
+
+    def fit(self, features, targets):
+        """ Fit training data.
+        Parameters
+        ----------
+        features : {array-like}, shape = [n_samples, n_features]
+        Training vectors, where n_samples is the number of
+        samples and
+        n_features is the number of features.
+        targets : array-like, shape = [n_samples]
+        Target values.
+        Returns
+        -------
+        self : object
+        """
+        rgen = np.random.RandomState(self.random_state)
+        self.w_ = rgen.normal(loc=0.0, scale=0.01, size=1 + features.shape[1])
+        self.cost_ = []
+        for i in range(self.n_iter):
+            # take the whole batch of X and calculate Y hat
+            net_input = self.net_input(features)
+            output = self.activation(net_input)
+            # calculate the errors
+            errors = (targets - output)
+            # weights update
+            # features T will be a m by n and errors will by n by 1
+            # so the weights update will be m by 1
+            self.w_[1:] += self.eta * features.T.dot(errors)
+            self.w_[0] += self.eta * errors.sum()
+            # calculate costs
+            cost = (errors**2).sum() / 2
+            self.cost_.append(cost)
+        return self
