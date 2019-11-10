@@ -24,6 +24,8 @@ class Perceptron(object):
         self.eta = eta
         self.n_iter = n_iter
         self.random_state = random_state
+        self.w_ = []
+        self.errors_ = []
 
     def net_input(self, instance):
         """Calculate the net input"""
