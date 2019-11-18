@@ -13,10 +13,15 @@ data.
 
 ### The Building Phase:
 The basic algorithms will be build in a class based approach
-and stored as a package/module. The later the models will be
-imported in the notebooks and applied several data sources.
+following the book mentioned and stored as a package/module. 
+It is actually exactly same copy of the codes taken from book 
+repository. The package is called `neuralbase`. Then later 
+the models will be imported from `neuralbase` in the notebooks 
+and applied in the data source.
+- Chapter 1: Tour of Models
 
 ### The Application Phase:
-The algorithm and other packages have already build the
-algorithm will used in the real world data in that section.
-They will presented in a very mathematical and elaborate way.
+The custom algorithm from building phase and other helper 
+packages  will used in the real world data in that section. 
+They will presented in a short mathematical manner too if 
+needed to explain the hyper parameters.
