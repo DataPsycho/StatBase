@@ -18,7 +18,7 @@ It is actually exactly same copy of the codes taken from book
 repository. The package is called `neuralbase`. Then later 
 the models will be imported from `neuralbase` in the notebooks 
 and applied in the data source.
-- Chapter 1: Tour of Models
+- Chapter 1: Tour of Algorithms
 
 ### The Application Phase:
 The custom algorithm from building phase and other helper 
