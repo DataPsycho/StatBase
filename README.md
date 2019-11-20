@@ -19,9 +19,15 @@ repository. The package is called `neuralbase`. Then later
 the models will be imported from `neuralbase` in the notebooks 
 and applied in the data source.
 - Chapter 1: Tour of Algorithms
+    - Here I have explored all the algorithm from scratch which includes Perceptron, Adaline, Logistic etc
+- Chapter 2: Data Pre-Processing and Feature Selection
+    - Here I have explored common data cleaning task and important feature selection via SBS algorithm
 
 ### The Application Phase:
 The custom algorithm from building phase and other helper 
 packages  will used in the real world data in that section. 
 They will presented in a short mathematical manner too if 
 needed to explain the hyper parameters.
+
+_All of the codes, concepts and most of the text taken from Python Machine 
+Learning Second Edition by Sebastian R._
