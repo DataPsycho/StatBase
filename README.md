@@ -22,7 +22,8 @@ and applied in the data source.
     - Here I have explored all the algorithm from scratch which includes Perceptron, Adaline, Logistic etc
 - Chapter 2: Data Pre-Processing and Feature Selection
     - Here I have explored common data cleaning task and important feature selection via SBS algorithm
-
+- Chapter 3: Feature Engineering
+    - Here I have explored PCA, LDA and Kernel PCA for  dimensionality reduction
 ### The Application Phase:
 The custom algorithm from building phase and other helper 
 packages  will used in the real world data in that section. 
