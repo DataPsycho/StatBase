@@ -19,11 +19,16 @@ repository. The package is called `neuralbase`. Then later
 the models will be imported from `neuralbase` in the notebooks 
 and applied in the data source.
 - Chapter 1: Tour of Algorithms
-    - Here I have explored all the algorithm from scratch which includes Perceptron, Adaline, Logistic etc
+    - Exploration of all the algorithm from scratch which includes Perceptron, 
+        Adaline, Logistic etc
 - Chapter 2: Data Pre-Processing and Feature Selection
-    - Here I have explored common data cleaning task and important feature selection via SBS algorithm
+    - Exploration common data cleaning task and important feature 
+        selection via SBS algorithm
 - Chapter 3: Feature Engineering
-    - Here I have explored PCA, LDA and Kernel PCA for  dimensionality reduction
+    - Explored PCA, LDA and Kernel PCA for  dimensionality reduction
+- Chapter 4:
+    - Building Pipelines using Scikit-Learn, Model Evaluation using Accuracy,
+        F1 Score and K-Fold Cross validation
 ### The Application Phase:
 The custom algorithm from building phase and other helper 
 packages  will used in the real world data in that section. 
